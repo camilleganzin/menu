@@ -1,0 +1,155 @@
+body {
+	background-color: #4AA3DF;
+	padding: 1rem 2rem;
+}
+
+h1, h2, p {
+	font-family: 'Dancing Script', cursive;
+	color: white;
+}
+
+h1 {
+	font-size: 1.75rem;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1rem;
+}
+
+p {
+	font-size: 0.75rem;
+}
+
+#button {
+	background-color: transparent;
+	font-family: 'Dancing Script', cursive;
+	color: white;
+	border: solid white;
+	padding: 1rem;
+	font-size: 3rem;
+}
+
+#little_button {
+	background-color: transparent;
+	width: 12%;
+	font-family: 'Dancing Script', cursive;
+	color: white;
+	border: solid white;
+	padding: 1rem;
+	font-size: 1rem;
+	margin-top: 3rem;
+	text-align: center;
+}
+
+img {
+	width: 30%;
+}
+
+#resultat {
+	text-align: center;
+}
+
+a:link {
+	text-decoration: none;
+	color: white;
+}
+
+.liste_repas {
+	margin-bottom: 1rem;
+}
+
+.liste_repas h2 {
+	font-size: 1rem;
+}
+
+.liste_repas p {
+	font-size: 1rem;
+}
+
+.liste_repas img {
+	width: 10%;
+}
+
+[data-hidden="true"] {
+    display: none;
+}
+
+figcaption {
+	font-size: 0.75rem;
+	font-family: 'Dancing Script', cursive;
+	color: #fff;
+}
+
+header {
+	position: relative;
+}
+
+.label {
+	position: absolute;
+	top: 9rem;
+	right: 5rem;
+}
+
+.connexion, .validation_connexion {
+	position: absolute;
+	top: 9rem;
+}
+
+
+.connexion {
+	right: 70rem;
+	height: 5rem;
+	background-color: #EC971F;
+	border: solid white;
+}
+
+.validation_connexion {
+	right: 60rem;
+	height: 5rem;
+	margin: 0;
+}
+
+.connect {
+	right: 42rem;
+	top: 9rem;
+	height: 5rem;
+	padding-top: 0.5rem;
+}
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (min-width: 30em){
+
+	#button {
+		padding: 4rem;
+		font-size: 8rem;
+	}
+}
+
+@media only screen and (min-width: 61em){
+	
+	body {
+		padding: 1rem 5rem;
+	}
+
+	h1 {
+		font-size: 3rem;
+	}
+
+	h2 {
+		font-size: 2.5rem;
+	}
+
+	p {
+		font-size: 1.5rem;
+	}
+
+	#button {
+		padding: 5rem;
+		font-size: 14rem;
+	}
+
+}
+
