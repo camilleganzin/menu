@@ -1,27 +1,16 @@
 <?php 
 require_once('init.php');
+require_once('header.php');
 ?>
-<!DOCTYPE html>
-<html>
-	<head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>J'ai faim - admin</title>
-        <script type="text/javascript" src="jquery-2.1.1.min.js"></script>
-        <script type="text/javascript" src="admin.js"></script>
-        <link rel="stylesheet" href="bootstrap-3.2.0-dist/css/bootstrap.css"/>
-        <link rel="stylesheet" href="css/style.min.css"/>
-        <link href='http://fonts.googleapis.com/css?family=Dancing+Script:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,700' rel='stylesheet' type='text/css'>
-    </head>
     <body data-ajax="<?= $config['ajax_url'] ?>">
     	<div class="container-fluid">
+    		<nav class="navbar fixed-top navbar-dark bg-dark">
+		      <a class="navbar-brand" href="index.php">Recettes au hasard</a>
+		    </nav>
 	        <form data-action="login" data-hidden="true" class="row form-connexion">
 	            <input class="connexion col-md-7 col-sm-12 col-xs-12" type="password" name="password" />
-	            <input class="validation_connexion btn btn-warning col-md-5 col-sm-12 col-xs-12" type="submit" value="Connexion" />
-	            <div class="row accueil">
-		            <div class="btn connect col-md-12"><a href="index.php">Accueil</a></div>
-		        </div>
+	            
+	            <button type="submit" class="validation_connexion btn btn-primary col-md-5 col-sm-12 col-xs-12">Connexion</button>
 	        </form>
 	        <div data-id="admin" data-hidden="true">
 	            <header>
