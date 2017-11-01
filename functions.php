@@ -14,12 +14,28 @@ function connexion_db() {
 }
 
 
-function repas() {
+function salt() {
         //on demande de lister les fichiers contenus dans la table repas
         global $db, $config;
 
         $dossier = $db->query('SELECT id, nom, type, image, temps_preparation, lien, credit_photo 
             FROM repas 
+            WHERE type = "Plat"
+            ORDER BY RAND() ASC LIMIT 1'); //on demande à ce que l'un des repas ressorte de manière aléatoire
+
+        $vrai_dossier = $dossier->fetchAll();
+
+        return $vrai_dossier;
+      
+}
+
+function sugar() {
+        //on demande de lister les fichiers contenus dans la table repas
+        global $db, $config;
+
+        $dossier = $db->query('SELECT id, nom, type, image, temps_preparation, lien, credit_photo 
+            FROM repas 
+            WHERE type = "Dessert"
             ORDER BY RAND() ASC LIMIT 1'); //on demande à ce que l'un des repas ressorte de manière aléatoire
 
         $vrai_dossier = $dossier->fetchAll();

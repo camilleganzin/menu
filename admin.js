@@ -31,6 +31,7 @@ $(function() {
                 submit_function(data);
             }
         }));
+        
     });
 
     //gestion de la déconnexion
