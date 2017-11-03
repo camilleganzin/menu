@@ -6,20 +6,17 @@ require_once('header.php');
     	<div class="container-fluid">
     		<nav class="navbar fixed-top navbar-dark bg-dark">
 		      <a class="navbar-brand" href="index.php">Recettes au hasard</a>
+		    	<div data-id="admin" data-hidden="true">
+	            	<button data-id="logout" class="btn btn-warning">Déconnexion</button>
+	        	</div>
 		    </nav>
-	        <form data-action="login" data-hidden="true" class="row form-connexion">
-	            <input class="connexion col-md-7 col-sm-12 col-xs-12" type="password" name="password" />
+	        <form data-action="login" data-hidden="true" class="form-connexion">
+	            <input class="connexion col-md-7 col-sm-12 col-xs-12" type="password" name="password" placeholder="Mot de passe" />
 	            
 	            <button type="submit" class="validation_connexion btn btn-primary col-md-5 col-sm-12 col-xs-12">Connexion</button>
 	        </form>
-	        <div data-id="admin" data-hidden="true">
-	            <header>
-	                <h1>Bienvenue sur l'espace d'administration !</h1>
-	                <button data-id="logout" class="btn btn-warning">Déconnexion</button>
-	                <div class="btn"><a href="index.php">Accueil</a></div>
-	            </header>
-	        </div>
-	        <div data-id="admin" data-hidden="true">
+	       
+	        <div data-id="admin" data-hidden="true" class="admin">
 	            <button data-id="show-add-form" class="btn btn-info">Afficher l’ajout</button>
 	            <form data-action="add" data-hidden="true">
 	                <div class="form-group">

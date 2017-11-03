@@ -4,7 +4,7 @@ $(function() {
     //decorateur
     function reponse_ajax(callback) {
         function callback2(data) {
-            if(!data['statut']) {
+            if(!data['statut'] && data['erreurs'] != undefined) {
                 alert(data['erreurs'].join('\n'));
                 return;
             }
