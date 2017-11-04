@@ -1,19 +1,14 @@
-Application de suggestion de menu au hasard. 
+Application de suggestion de menu au hasard en PHP. 
 
-Quand on clique sur "J'ai faim", cela renvoie un plat au hasard. 
+Quand on clique sur "J'ai envie de salé" ou "J'ai envie de sucré", cela renvoie un plat au hasard, selon le type sélectionné (Requette en AJAX). 
 
-Pour les plats, on crée une base de données : 
+La page admin permet  
+- L'ajout et la modification des plats en AJAX (affichage, soumission)
+- D'afficher la liste des plats
 
-Plat 
-- nom
-- type (plat/dessert...)
-- image 
-- calories
+Les données sont stockés dans une base de données en SQL. 
 
-Une fois la base de données créée, on créé un bouton "j'ai faim", sur lequel on applique un évènement Jquery, et avec AJAX on récupère les données de la base au hasard.
+Pour tester, importez le fichier install.sql et créer un fichier config.php basé sur le fichier config.example.php
+Le mot de passe pour accéder à l'espace d'administration est parametré dans le fichier config.php
 
 
-On peut imaginer ensuite de faire une page admin, permettant: 
-- Formulaire d'ajout/modification des plats AJAX (affichage, soumission)
-- Listing des plats
-- Recherche, filtrage des plats
