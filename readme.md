@@ -6,7 +6,7 @@ L'espace d'aministration permet
 - L'ajout, la modification et la suppression des plats en AJAX (affichage, soumission)
 - D'afficher la liste des plats
 
-Les données sont stockées dans une base de données en SQL. 
+Les données sont stockées en SQL. 
 
 Pour tester, importez le fichier install.sql et créer un fichier config.php basé sur le fichier config.example.php
 Le mot de passe pour accéder à l'espace d'administration est parametré dans le fichier config.php
