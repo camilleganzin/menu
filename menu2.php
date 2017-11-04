@@ -9,7 +9,7 @@ header('Content-Type: application/json');
 $resultat['repas'] = array();
 	
 
-$resultat_pagines = menu($_REQUEST['type']);
+$resultat_pagines = repas();
 $resultat['repas'] = $resultat_pagines;
 
 echo json_encode($resultat);

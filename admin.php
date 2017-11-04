@@ -3,7 +3,7 @@ require_once('init.php');
 require_once('header.php');
 ?>
     <body data-ajax="<?= $config['ajax_url'] ?>">
-    	<div class="container-fluid">
+    	<main class="container-full">
     		<nav class="navbar fixed-top navbar-dark bg-dark">
 		      <a class="navbar-brand" href="index.php">Recettes au hasard</a>
 		    	<div data-id="admin" data-hidden="true">
@@ -17,7 +17,7 @@ require_once('header.php');
 	        </form>
 	       
 	        <div data-id="admin" data-hidden="true" class="admin">
-	            <button data-id="show-add-form" class="btn btn-info">Afficher l’ajout</button>
+	            <button data-id="show-add-form" class="btn btn-info">Ajouter</button>
 	            <form data-action="add" data-hidden="true">
 	                <div class="form-group">
 	                    <label class="control-label" for="id_nom">Nom : </label>
@@ -93,6 +93,7 @@ require_once('header.php');
 	                <div class="form-group">
 	                     <input type="hidden" name="id" />
 	                    <input type="submit" value="Modifier" class="btn btn-primary" />
+	                    <input type="button" value="Annuler" name="cancel" class="btn btn-danger" />
 	                </div>
 	            </form>
 	
@@ -110,6 +111,6 @@ require_once('header.php');
 	                </tr>
 	            </table>
 	        </div>
-	    </div>
+	    </main>
     </body>
 </html>

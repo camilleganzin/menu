@@ -14,28 +14,13 @@ function connexion_db() {
 }
 
 
-function salt() {
+function menu($s) {
         //on demande de lister les fichiers contenus dans la table repas
         global $db, $config;
 
         $dossier = $db->query('SELECT id, nom, type, image, temps_preparation, lien, credit_photo 
             FROM repas 
-            WHERE type = "Plat"
-            ORDER BY RAND() ASC LIMIT 1'); //on demande à ce que l'un des repas ressorte de manière aléatoire
-
-        $vrai_dossier = $dossier->fetchAll();
-
-        return $vrai_dossier;
-      
-}
-
-function sugar() {
-        //on demande de lister les fichiers contenus dans la table repas
-        global $db, $config;
-
-        $dossier = $db->query('SELECT id, nom, type, image, temps_preparation, lien, credit_photo 
-            FROM repas 
-            WHERE type = "Dessert"
+            WHERE type = '.$db->quote($s).'
             ORDER BY RAND() ASC LIMIT 1'); //on demande à ce que l'un des repas ressorte de manière aléatoire
 
         $vrai_dossier = $dossier->fetchAll();
@@ -111,7 +96,7 @@ function modifications($id, $data) {
     foreach($data as $k => $v) {
         if(in_array($k, $keys)) {
             $updated_values .= $k.' = :'.$k.', ';
-            $req_data[':'.$k] = $v;
+            $req_data[':'.$k] = htmlspecialchars($v);
         }
     }
     if(strlen($updated_values) > 0) {

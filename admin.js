@@ -94,6 +94,23 @@ $(function() {
     $('[data-id="liste-plats"]').on('click', '[data-id="plat-mod"]', function(ev) {
         var form = $('[data-action="modifier"]');
         var id = $(ev.target).parents('tr').data('plat-id');
+        var addform = $('[data-action="add"]');
+
+        //scroll au niveau du formulaire
+        $('html, body').animate({
+            scrollTop: $('[data-action="modifier"]').offset().top
+        }, 2000);
+        
+        //fermeture du formulaire d'ajout s'il est ouvert
+        if(addform.attr('data-hidden') == 'false') {
+            addform.attr('data-hidden', 'true');
+            $('[data-id="show-add-form"]').text('Ajouter');
+        }
+
+        form.on('click', '[name="cancel"]', function(ev) {
+            form.attr('data-hidden','true');
+        })
+
         $.post(ajax_url, {action: 'get_plat', id: id}, reponse_ajax(function(data) {
             for(var i in data['plat']) {
                 if(i != 'image') {
@@ -111,10 +128,10 @@ $(function() {
         var form = $('[data-action="add"]');
         if(form.attr('data-hidden') == 'true') {
             form.attr('data-hidden', 'false');
-            $(ev.target).text('Cacher l’ajout');
+            $(ev.target).text('Annuler l’ajout');
         } else {
             form.attr('data-hidden', 'true');
-            $(ev.target).text('Afficher l’ajout');
+            $(ev.target).text('Ajouter');
         }
     });
 
